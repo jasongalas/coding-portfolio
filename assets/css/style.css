@@ -4,17 +4,23 @@
 
 :root{
     --headlinecolor: rgb(136, 102, 136);
+    --headlinetext:  blanchedalmond;
     --textcolor: white;
 }
 
 header{
     background-color: purple;
+    color: var(--headlinetext);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     padding-left: 10px;
+}
+
+h1{
+    font-style: italic;
 }
 
 nav{
@@ -26,6 +32,10 @@ nav{
 nav a{
     color: var(--textcolor);
     padding: 5px 10px;
+}
+
+nav a:last-child{
+    padding-right: 10px;
 }
 
 nav a:hover{
@@ -43,9 +53,9 @@ body{
 
 .hero{
     padding: 5% 10%;
-        justify-content: center;
-        align-items: flex-end;
-        text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
 }
 
 .page-info{
@@ -56,6 +66,8 @@ body{
 
 .headline{
     background-color: var(--headlinecolor);
+    color: var(--headlinetext);
+    font-style: oblique;
     margin: 0;
     padding: 10px;
     text-align: center;
@@ -63,6 +75,8 @@ body{
 
 p{
     margin: 0;
+    padding: 10px;
+    font-weight: lighter;
     justify-content: center;
     text-align: center;
 }
@@ -70,8 +84,9 @@ p{
 .project{
     display: flex;
     max-height: 50%;
-    align-items: flex-start;
+    align-items: center;
     border: 5px solid var(--textcolor);
+    margin: 10px;
     color: var(--textcolor);
 }
 
