@@ -48,18 +48,20 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: black;
     color: var(--textcolor);
-    padding: 5px;
 }
 
 .hero{
     padding: 5% 10%;
     justify-content: center;
     align-items: flex-end;
-    text-align: center;
+    text-align: center; 
+    background-image: url(../images/IMG_9771.jpeg);
+    background-size: cover;
+    background-position: center;
+
 }
 
 .page-info{
-    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -70,7 +72,15 @@ body{
     font-style: oblique;
     margin: 0;
     padding: 10px;
+    width: 100%;
     text-align: center;
+}
+
+.page-work{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 p{
@@ -79,6 +89,11 @@ p{
     font-weight: lighter;
     justify-content: center;
     text-align: center;
+}
+
+#image-div{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .project{
@@ -90,10 +105,53 @@ p{
     color: var(--textcolor);
 }
 
-address a{
-    color: var(--textcolor);
+.project:nth-child(1){
+    flex: 1 0 90%;
+}
+.project:nth-child(n+2){
+    flex: 1 0 45%;
+}
+
+.project h3{
+    text-align: center;
+    background-color: var(--headlinecolor);
+    padding: 25px;
+    margin: 0;
+}
+
+address div{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }
 
+address div a{
+    color: var(--textcolor);
+}
+
+.image-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    display: block;
+    width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .image-section {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .image-section {
+        width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .image-section {
+        width: 100%;     
+  }
+}
